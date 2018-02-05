@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="1.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+  
+  <named-query name="get.files.by.name">
+    <query><![CDATA[SELECT f from DocumentEntity f]]></query>
+  </named-query>
+  
+  <named-query name="get.filecontent.by.filename">
+    <query><![CDATA[SELECT d FROM DocumentEntity d WHERE fileName = :fileName]]></query>
+  </named-query>
+
+  <named-query name="get.filecontent.by.filename.fortext">
+    <query><![CDATA[select fileContent from DocumentEntity where fileName = :fileName]]></query>
+  </named-query>
+</entity-mappings>
